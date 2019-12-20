@@ -20,3 +20,26 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+import VueRouter from 'vue-router';
+
+window.Vue.use(VueRouter);
+
+import CompaniesIndex from './components/vacations/VacationsIndex.vue';
+import CompaniesCreate from './components/vacations/VacationsCreate.vue';
+import CompaniesEdit from './components/vacations/VacationsEdit.vue';
+
+const routes = [
+    {
+        path: '/',
+        components: {
+            vacationsIndex: VacationsIndex
+        }
+    },
+    {path: '/admin/vacations/create', component: VacationsCreate, name: 'createVacation'},
+    {path: '/admin/vacations/edit/:id', component: VacationsEdit, name: 'editVacation'},
+]
+
+const router = new VueRouter({ routes })
+
+const app = new Vue({ router }).$mount('#app')
