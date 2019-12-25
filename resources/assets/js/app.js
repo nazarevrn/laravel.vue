@@ -15,19 +15,13 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
-
 import VueRouter from 'vue-router';
 
 window.Vue.use(VueRouter);
 
-import CompaniesIndex from './components/vacations/VacationsIndex.vue';
-import CompaniesCreate from './components/vacations/VacationsCreate.vue';
-import CompaniesEdit from './components/vacations/VacationsEdit.vue';
+import VacationsIndex from './components/vacations/VacationsIndex.vue';
+import VacationsCreate from './components/vacations/VacationsCreate.vue';
+import VacationsEdit from './components/vacations/VacationsEdit.vue';
 
 const routes = [
     {

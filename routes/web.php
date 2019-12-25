@@ -18,9 +18,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::view('/vacations', 'layouts.vacations.body');
-
-Route::view('/vacations', function()
-{
-    return view('vacations');
-});  
