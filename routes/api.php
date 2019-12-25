@@ -19,5 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api\V1', 'as' => 'api.'], function () {
     Route::resource('vacations', 'VacationsController', ['except' => ['create', 'edit']]);
-    Route::view('vacations', 'layouts.vacations.body');
+    //Route::view('vacations', 'vacations');
 });
