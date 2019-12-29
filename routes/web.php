@@ -19,6 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/api/v1/vacations', function () {
+Route::any('/api/v1/vacations', function () {
     return view ('vacations');
 });
